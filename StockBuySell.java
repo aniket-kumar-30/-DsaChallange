@@ -7,10 +7,13 @@ public class StockBuySell{
         int sell = 0;
         int i = 0;
         while(i < n-1){
+            // find local minima
             while((i < n-1) && (a[i] >= a[i+1]))
                 i++;
+            // check end of array
             if(i == n-1) break;
             buy = i++;
+            // find local maxima
             while((i < n) && (a[i] >= a[i-1]))
                 i++;
             sell = i-1;
